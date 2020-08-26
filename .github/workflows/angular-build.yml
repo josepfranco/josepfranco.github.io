@@ -1,0 +1,24 @@
+
+name: CI
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: angular build and deploy
+      uses: AhsanAyaz/angular-deploy-gh-pages-actions@v1.3.1
+      with:
+        github_access_token: ${{ secrets.GITHUB_TOKEN }}
+        angular_project_dir: ./personal-website/
+        build_configuration: production
+        base_href: /
+        deploy_branch: gh-pages
+        angular_dist_build_folder: ./personal-website/dist/
