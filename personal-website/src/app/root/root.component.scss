@@ -1,7 +1,15 @@
 @import "src/scss/modules/colours";
+@import "src/scss/modules/utils";
 
 .sidebar {
   background: $blue;
+  @include boxShadow(6);
+  transition: all 450ms ease;
+}
+
+.sidebar:hover {
+  @include boxShadow(16);
+  transition: all 450ms ease;
 }
 
 .content {

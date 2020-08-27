@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { ProfileCardComponent } from './profile-card/profile-card.component';
+import { PageComponent } from './page/page.component';
 
 const routes: Routes = [
-  { path: '', component: ProfileCardComponent }
+  { path: '', component: PageComponent }
 ];
 
 @NgModule({
