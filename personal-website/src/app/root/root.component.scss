@@ -1,0 +1,15 @@
+@import "src/scss/modules/colours";
+
+.sidebar {
+  background: $blue;
+}
+
+.content {
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
+
+  &__item {
+    flex: 1;
+  }
+}

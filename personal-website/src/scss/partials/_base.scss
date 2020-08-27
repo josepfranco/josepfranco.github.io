@@ -1,0 +1,23 @@
+/*--------------------------------------------------------------------------------------------------------------------
+ *--
+ *-- Base partial
+ *--
+ *--------------------------------------------------------------------------------------------------------------------*/
+
+body {
+  color: $gray;
+  font-family: $ff;
+  font-weight: $fw-regular;
+  line-height: 1.6;
+  background: $very-light-blue;
+
+  width: 100vw;
+  height: 100vh;
+}
+
+h1 {
+  color: $dark-gray;
+  line-height: 1;
+  font-size: 3.125rem;
+  font-weight: $fw-bold;
+}
