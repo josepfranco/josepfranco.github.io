@@ -1,0 +1,60 @@
+@import "src/scss/modules/all";
+
+$width-collapsed-sidebar: 5em;
+$width-expanded-sidebar: 12em;
+
+$sidebar_logo_height: 12em;
+$sidebar_item_height: 3em;
+
+.sidebar {
+  position: absolute;
+  display: flex;
+  width: $width-collapsed-sidebar;
+  height: 100vh;
+  background: $blue;
+  flex-direction: row;
+  align-items: center;
+  justify-items: center;
+  @include boxShadow(6);
+  transition: all 450ms ease;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: $sidebar_logo_height;
+  }
+
+  &__logo:hover {
+    background: rgba(255, 255, 255, 0.25);
+    cursor: pointer;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: $sidebar_item_height;
+  }
+
+  &__item:hover {
+    background: rgba(255, 255, 255, 0.25);
+    cursor: pointer;
+  }
+
+  &--expanded {
+    width: $width-expanded-sidebar;
+    @include boxShadow(16);
+    transition: all 450ms ease;
+  }
+}
+
+
