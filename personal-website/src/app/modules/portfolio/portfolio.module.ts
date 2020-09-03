@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PageComponent } from './page/page.component';
-import { HomepageRoutingModule } from './homepage-routing.module';
+import { PortfolioRoutingModule } from './portfolio-routing.module';
 
 
 
@@ -9,12 +9,9 @@ import { HomepageRoutingModule } from './homepage-routing.module';
   declarations: [
     PageComponent
   ],
-  exports: [
-    PageComponent
-  ],
   imports: [
     CommonModule,
-    HomepageRoutingModule
+    PortfolioRoutingModule
   ]
 })
-export class HomepageModule { }
+export class PortfolioModule { }

@@ -1,0 +1,10 @@
+<div class="item">
+    <p *ngIf="isSidebarExpanded"
+       @fadeAnimation>
+      {{ name }}
+    </p>
+    <i *ngIf="!isSidebarExpanded"
+       class="{{ icon }}"
+       @fadeAnimation>
+    </i>
+</div>

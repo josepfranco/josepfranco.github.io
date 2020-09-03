@@ -1,11 +1,10 @@
 import {Component, HostBinding, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'app-profile-card',
-  templateUrl: './profile-card.component.html',
-  styleUrls: ['./profile-card.component.scss'],
+  templateUrl: './page.component.html',
+  styleUrls: ['./page.component.scss'],
 })
-export class ProfileCardComponent implements OnInit {
+export class PageComponent implements OnInit {
 
   @HostBinding('style.width')
   parentWidth = '100%';

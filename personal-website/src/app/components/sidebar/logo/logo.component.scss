@@ -1,0 +1,10 @@
+@import "src/scss/modules/all";
+
+$logo-font-size: 5rem;
+
+h1 {
+  text-align: center;
+  font-family: $ff-logo;
+  font-size: $logo-font-size;
+  color: $white;
+}

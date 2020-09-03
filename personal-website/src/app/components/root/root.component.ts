@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, HostBinding, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -11,5 +11,4 @@ export class RootComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }

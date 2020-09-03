@@ -1,0 +1,13 @@
+@import "src/scss/modules/all";
+
+.item {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+
+  p, i {
+    position: absolute;
+    color: $white;
+  }
+}
