@@ -5,24 +5,29 @@
 
   <div class="sidebar__container">
     <app-logo class="sidebar__logo"
+              [routerLink]="''"
               [isSidebarExpanded]="isExpanded">
     </app-logo>
     <app-item class="sidebar__item"
+              [routerLink]="'experience'"
               [isSidebarExpanded]="isExpanded"
               [name]="'Experience'"
               [icon]="'gg-briefcase'">
     </app-item>
     <app-item class="sidebar__item"
+              [routerLink]="'education'"
               [isSidebarExpanded]="isExpanded"
               [name]="'Education'"
               [icon]="'gg-read'">
     </app-item>
     <app-item class="sidebar__item"
+              [routerLink]="'portfolio'"
               [isSidebarExpanded]="isExpanded"
               [name]="'Portfolio'"
               [icon]="'gg-album'">
     </app-item>
     <app-item class="sidebar__item"
+              [routerLink]="'blog'"
               [isSidebarExpanded]="isExpanded"
               [name]="'Blog'"
               [icon]="'gg-list'">

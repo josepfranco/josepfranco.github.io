@@ -4,6 +4,8 @@
  *--
  *--------------------------------------------------------------------------------------------------------------------*/
 
+$padding-page: 0em;
+
 body {
   color: $gray;
   font-family: $ff;
@@ -21,3 +23,11 @@ h1 {
   font-size: 3.125rem;
   font-weight: $fw-bold;
 }
+
+.page {
+  display: block;
+  height: 100%;
+  padding: $padding-page;
+  box-sizing: border-box;
+}
+

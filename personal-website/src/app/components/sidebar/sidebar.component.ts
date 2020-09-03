@@ -27,5 +27,4 @@ export class SidebarComponent implements OnInit {
   collapseSidebar(): void {
     this.isExpanded = false;
   }
-
 }
