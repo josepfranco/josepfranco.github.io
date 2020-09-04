@@ -24,6 +24,20 @@ h1 {
   font-weight: $fw-bold;
 }
 
+h2 {
+  color: $dark-gray;
+  line-height: 1;
+  font-size: 2rem;
+  font-weight: $fw-light;
+}
+
+h3 {
+  color: $gray;
+  line-height: 1;
+  font-size: 1.5rem;
+  font-weight: $fw-light;
+}
+
 .page {
   display: block;
   height: 100%;

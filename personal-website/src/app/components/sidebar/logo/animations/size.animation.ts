@@ -6,10 +6,10 @@ export const sizeAnimation =
   trigger('sizeAnimation',
     [
       state(SizeState.Collapsed, style({
-        'font-size': '3rem'
+        'font-size': '1rem'
       })),
       state(SizeState.Expanded, style({
-        'font-size': '5rem'
+        'font-size': '3rem'
       })),
       transition(
         `${SizeState.Collapsed} <=> ${SizeState.Expanded}`,
