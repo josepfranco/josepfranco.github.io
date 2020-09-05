@@ -9,9 +9,6 @@ import { HomepageRoutingModule } from './homepage-routing.module';
   declarations: [
     PageComponent
   ],
-  exports: [
-    PageComponent
-  ],
   imports: [
     CommonModule,
     HomepageRoutingModule

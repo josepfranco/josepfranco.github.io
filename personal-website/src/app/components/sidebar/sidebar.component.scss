@@ -17,6 +17,7 @@ $sidebar_item_height: 3em;
   justify-items: center;
   @include boxShadow(6);
   transition: all 450ms ease;
+  z-index: 10;
 
   &__container {
     display: flex;

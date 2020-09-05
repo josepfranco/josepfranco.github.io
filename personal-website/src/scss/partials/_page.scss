@@ -1,0 +1,21 @@
+$padding-page: 0em;
+
+$margin-lateral: 12em;
+$margin-top: 12em;
+
+.page {
+  display: block;
+  height: 100%;
+  padding: $padding-page;
+  box-sizing: border-box;
+}
+
+.page-scrollable {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  margin-top: $margin-top;
+  margin-right: $margin-lateral;
+  margin-left: $margin-lateral;
+}

@@ -1,0 +1,48 @@
+@import "../scss/modules/colours";
+@import "../scss/modules/utils";
+
+.background {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: -999;
+  overflow: hidden;
+
+  &__close-layer {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: url('../assets/city_layer_1.png') no-repeat center;
+    background-size: cover;
+    z-index: -997;
+  }
+
+  &__middle-layer {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: url('../assets/city_layer_2.png') no-repeat center;
+    background-size: cover;
+    z-index: -998;
+  }
+
+  &__far-layer {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: url('../assets/city_layer_3.png') no-repeat center;
+    background-size: cover;
+    z-index: -999;
+  }
+}
+
+.content {
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
+  padding-left: 5em;
+
+  &__item {
+    flex: 1;
+  }
+}
