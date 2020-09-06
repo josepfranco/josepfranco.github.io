@@ -1,0 +1,52 @@
+.background {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: -999;
+  overflow: hidden;
+
+  &__overlay {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: url('../../../assets/city_fade_overlay.png') repeat-x center center;
+    background-size: cover;
+    z-index: -995;
+  }
+
+  &__close-layer {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: url('../../../assets/city_layer_1.png') repeat-x center center;
+    background-size: cover;
+    z-index: -996;
+  }
+
+  &__middle-layer {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: url('../../../assets/city_layer_2.png') repeat-x center center;
+    background-size: cover;
+    z-index: -997;
+  }
+
+  &__far-layer {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: url('../../../assets/city_layer_3.png') repeat-x center center;
+    background-size: cover;
+    z-index: -998;
+  }
+
+  &__farthest-layer {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: url('../../../assets/city_layer_4.png') repeat-x center center;
+    background-size: cover;
+    z-index: -999;
+  }
+}

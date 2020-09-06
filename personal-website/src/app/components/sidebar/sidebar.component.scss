@@ -7,10 +7,10 @@ $sidebar_logo_height: 6em;
 $sidebar_item_height: 3em;
 
 .sidebar {
-  position: absolute;
+  position: fixed; // <- sticks to the viewport, should I keep this? revise later
   display: flex;
   width: $width-collapsed-sidebar;
-  height: 100vh;
+  height: 100%;
   background: $blue;
   flex-direction: row;
   align-items: center;
@@ -38,6 +38,11 @@ $sidebar_item_height: 3em;
     cursor: pointer;
   }
 
+  &__logo:focus {
+    outline: none;
+    border: 0;
+  }
+
   &__item {
     display: flex;
     align-items: center;
@@ -49,6 +54,11 @@ $sidebar_item_height: 3em;
   &__item:hover {
     background: rgba(255, 255, 255, 0.25);
     cursor: pointer;
+  }
+
+  &__item:focus {
+    outline: none;
+    border: 0;
   }
 
   &--expanded {

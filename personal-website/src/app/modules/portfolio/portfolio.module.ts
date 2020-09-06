@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PageComponent } from './page/page.component';
 import { PortfolioRoutingModule } from './portfolio-routing.module';
+import {ComponentsModule} from '../../components/components.module';
 
 
 
@@ -9,9 +10,10 @@ import { PortfolioRoutingModule } from './portfolio-routing.module';
   declarations: [
     PageComponent
   ],
-  imports: [
-    CommonModule,
-    PortfolioRoutingModule
-  ]
+    imports: [
+        CommonModule,
+        PortfolioRoutingModule,
+        ComponentsModule
+    ]
 })
 export class PortfolioModule { }

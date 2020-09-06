@@ -1,0 +1,16 @@
+.school-card {
+  filter: grayscale(100%);
+  margin-right: 2em;
+  margin-left: 2em;
+
+  img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+  }
+
+  &--active {
+    filter: grayscale(0%);
+    transition: all 450ms ease;
+  }
+}

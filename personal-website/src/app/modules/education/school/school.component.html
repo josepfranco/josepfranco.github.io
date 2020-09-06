@@ -1,0 +1,8 @@
+<div class="school-card"
+     [ngClass]="{ 'school-card--active': isSelected }"
+     (mouseenter)="select()"
+     (mouseleave)="deselect()"
+     (click)="select()">
+  <img src="assets/education/{{ imageFile }}"
+       alt="{{ name }}">
+</div>
