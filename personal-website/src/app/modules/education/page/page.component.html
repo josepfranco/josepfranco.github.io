@@ -1,7 +1,9 @@
 <div class="page-scrollable">
   <h1>Education</h1>
   <section class="school-cards">
-    <app-school [name]="'ESFGA'" [imageFile]="'esfga_logo.jpg'"></app-school>
-    <app-school [name]="'FCUL'" [imageFile]="'fcul_logo.png'"></app-school>
+    <app-school *ngFor="let school of dataList"
+                [name]="school.name"
+                [imageFile]="school.imageUrl">
+    </app-school>
   </section>
 </div>

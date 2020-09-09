@@ -1,16 +1,9 @@
 <div class="page-scrollable">
   <h1>Experience</h1>
-
   <section class="company-cards">
-    <app-company [name]="'Siemens AG'" [imageFile]="'siemens_logo.svg'"></app-company>
-    <app-company [name]="'LaSIGE'" [imageFile]="'lasige_logo.png'"></app-company>
-  </section>
-
-  <section class="company-timeline">
-      <p>Siemens</p>
-  </section>
-
-  <section class="company-timeline">
-      <p>LaSIGE</p>
+    <app-company *ngFor="let company of dataList"
+                 [name]="company.name"
+                 [imageFile]="company.imageUrl">
+    </app-company>
   </section>
 </div>

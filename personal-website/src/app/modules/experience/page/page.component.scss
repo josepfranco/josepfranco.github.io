@@ -1,5 +1,3 @@
-@import "src/scss/modules/all";
-
 .company-cards {
   display: flex;
   flex-wrap: wrap;
@@ -7,11 +5,3 @@
   justify-items: center;
   margin-top: 5em;
 }
-
-.company-timeline {
-  height: 900px;
-  align-self: stretch;
-  background: $white;
-  padding: 2em;
-}
-

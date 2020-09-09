@@ -1,5 +1,8 @@
 import {Component, HostBinding, OnDestroy, OnInit} from '@angular/core';
-import * as ScrollMagic from 'scrollmagic';
+import {Subscription} from 'rxjs';
+import {ExperienceDataService} from '../../../services/data/experience-data.service';
+import {CompanyDto} from '../../../services/models/CompanyDto';
+import {DateUtilsService} from '../../../services/utils/date.service';
 
 @Component({
   templateUrl: './page.component.html',
@@ -13,32 +16,24 @@ export class PageComponent implements OnInit, OnDestroy {
   @HostBinding('style.height')
   parentHeight = '100%';
 
-  private scrollMagicController: any;
+  dataList: CompanyDto[];
 
-  constructor() { }
+  private $dataSubscription: Subscription;
+
+  constructor(private experienceDataService: ExperienceDataService,
+              private dateUtilService: DateUtilsService) {
+    this.dataList = [];
+  }
 
   ngOnInit(): void {
-    // this.scrollMagicController = new ScrollMagic.Controller({
-    //   globalSceneOptions: {
-    //     triggerHook: 'onLeave',
-    //     duration: '200%'
-    //   }
-    // });
-    //
-    // // get all slides
-    // // TODO: make this dynamic
-    // const siemensElement = document.getElementById('siemens');
-    // const lasigeElement = document.getElementById('lasige');
-    // const slides = [siemensElement, lasigeElement];
-    //
-    // for (const slide of slides) {
-    //   new ScrollMagic.Scene({
-    //     triggerElement: slide
-    //   }).setPin(slide, { pushFollowers: false })
-    //     .addTo(this.scrollMagicController);
-    // }
+    this.$dataSubscription = this.experienceDataService
+      .getAll()
+      .subscribe((list: CompanyDto[]) => {
+        this.dataList = list.sort((a, b) => this.dateUtilService.compareDate(b.startDate, a.startDate));
+      });
   }
 
   ngOnDestroy(): void {
+    this.$dataSubscription.unsubscribe();
   }
 }

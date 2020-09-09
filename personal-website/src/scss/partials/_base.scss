@@ -11,6 +11,14 @@ body {
   line-height: 1.6;
   background: $dark-blue;
   overflow-x: hidden;
+
+  // remove scrollbar
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 h1 {

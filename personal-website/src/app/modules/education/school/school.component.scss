@@ -1,7 +1,12 @@
+@import "src/scss/modules/all";
+
 .school-card {
   filter: grayscale(100%);
-  margin-right: 2em;
-  margin-left: 2em;
+  padding: 2em;
+  margin: 2em;
+  background: $white;
+  @include boxShadow(6);
+  transition: all 450ms ease;
 
   img {
     width: 200px;
@@ -11,6 +16,8 @@
 
   &--active {
     filter: grayscale(0%);
+    transform: scale(1.05);
+    @include boxShadow(12);
     transition: all 450ms ease;
   }
 }

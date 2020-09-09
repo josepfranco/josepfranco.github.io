@@ -15,8 +15,8 @@ export class BackgroundParallaxComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     const background = document.getElementById('backgroundId');
     this.parallax = new Parallax(background, {
-      hoverOnly: true,
-      relativeInput: true,
+      hoverOnly: false,
+      relativeInput: false,
       clipRelativeInput: true,
       calibrateX: true,
       calibrateY: true,

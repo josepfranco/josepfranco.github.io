@@ -1,0 +1,10 @@
+<h1 *ngIf="title" class="card-header">{{ title }}</h1>
+<div class="card">
+  <div *ngIf="!isInverted" class="card__line card__line--left"></div>
+  <div class="card__content">
+    <ng-content></ng-content>
+  </div>
+  <div *ngIf="isInverted" class="card__line card__line--right"></div>
+</div>
+
+
