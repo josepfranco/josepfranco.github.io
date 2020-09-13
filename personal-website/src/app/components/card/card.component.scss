@@ -20,11 +20,14 @@
     &--right {
       margin-left: 1.5em;
     }
+
+    @include boxShadow(12);
   }
 
   &__content {
     flex: 1;
     padding: 2em;
     background: $white;
+    @include boxShadow(12);
   }
 }

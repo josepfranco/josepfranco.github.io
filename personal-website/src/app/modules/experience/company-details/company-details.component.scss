@@ -1,0 +1,58 @@
+@import "src/scss/modules/all";
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+
+  &__information {
+    flex-grow: 1;
+    flex-basis: 0;
+    width: 0;
+
+    h1, h2, h3, h4, h5, p {
+      margin: 0.25em 0 0.25em 0;
+      text-align: center;
+    }
+  }
+
+  &__tags {
+    margin-top: 2em;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__description {
+    margin-top: 2em;
+    p {
+      margin: 0;
+      text-align: left;
+    }
+  }
+
+  &__url {
+    margin-top: 1em;
+    align-self: center;
+    justify-self: flex-end;
+  }
+
+  &__separator {
+    width: 1px;
+    align-self: stretch;
+    background: $gray;
+    margin-right: 2em;
+    margin-left: 2em;
+  }
+
+  &__image {
+    padding: 2em;
+    width: 0;
+    align-self: center;
+    flex-grow: 1;
+    flex-basis: 0;
+    object-fit: contain;
+  }
+}

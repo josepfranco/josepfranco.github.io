@@ -5,12 +5,16 @@ import { ExperienceRoutingModule } from './experience-routing.module';
 import { PageComponent } from './page/page.component';
 import { ComponentsModule } from '../../components/components.module';
 import {CompanyComponent} from './company/company.component';
+import { CompanyListComponent } from './company-list/company-list.component';
+import { CompanyDetailsComponent } from './company-details/company-details.component';
 
 
 @NgModule({
   declarations: [
     PageComponent,
-    CompanyComponent
+    CompanyComponent,
+    CompanyListComponent,
+    CompanyDetailsComponent
   ],
   imports: [
     CommonModule,

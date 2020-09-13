@@ -23,17 +23,23 @@ export class CompanyComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  /**
+   * Select this specific company
+   */
   select(): void {
     this.isSelected = true;
     this.emitSelectedEvent();
   }
 
+  /**
+   * Deselect this specific company
+   */
   deselect(): void {
     this.isSelected = false;
     this.emitSelectedEvent();
   }
 
   private emitSelectedEvent(): void {
-    this.selected.emit([name, this.isSelected]);
+    this.selected.emit([this.name, this.isSelected]);
   }
 }

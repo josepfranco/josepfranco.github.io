@@ -29,7 +29,7 @@ export class PageComponent implements OnInit, OnDestroy {
     this.$dataSubscription = this.educationDataService
       .getAll()
       .subscribe((list: SchoolDto[]) => {
-        this.dataList = list.sort((a, b) => this.dateUtilService.compareDate(b.startDate, a.startDate));
+        this.dataList = list.sort((a, b) => this.dateUtilService.compareDate(b.duration.start, a.duration.start));
       });
   }
 

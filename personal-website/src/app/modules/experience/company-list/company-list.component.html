@@ -1,0 +1,5 @@
+<app-company *ngFor="let company of companyList"
+             [name]="company.name"
+             [imageFile]="company.imageUrl"
+             (selected)="onSelected($event)">
+</app-company>

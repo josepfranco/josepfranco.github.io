@@ -16,24 +16,34 @@ export class PageComponent implements OnInit, OnDestroy {
   @HostBinding('style.height')
   parentHeight = '100%';
 
-  dataList: CompanyDto[];
+  companyList: CompanyDto[];
+  selectedCompany: CompanyDto;
 
   private $dataSubscription: Subscription;
 
   constructor(private experienceDataService: ExperienceDataService,
               private dateUtilService: DateUtilsService) {
-    this.dataList = [];
+    this.companyList = [];
   }
 
   ngOnInit(): void {
     this.$dataSubscription = this.experienceDataService
       .getAll()
       .subscribe((list: CompanyDto[]) => {
-        this.dataList = list.sort((a, b) => this.dateUtilService.compareDate(b.startDate, a.startDate));
+        if (list == null) {
+          this.companyList = [];
+        }
+        this.companyList = list.sort((a, b) => this.dateUtilService.compareDate(b.duration.start, a.duration.start));
+        this.selectedCompany = this.companyList[0];
       });
   }
 
   ngOnDestroy(): void {
     this.$dataSubscription.unsubscribe();
+  }
+
+  onSelected(event: CompanyDto): void {
+    if (event == null) { return; }
+    this.selectedCompany = event;
   }
 }

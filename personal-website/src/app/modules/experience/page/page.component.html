@@ -1,9 +1,12 @@
 <div class="page-scrollable">
   <h1>Experience</h1>
   <section class="company-cards">
-    <app-company *ngFor="let company of dataList"
-                 [name]="company.name"
-                 [imageFile]="company.imageUrl">
-    </app-company>
+    <app-company-list class="company-cards__selection"
+                      [companyList]="companyList"
+                      (selected)="onSelected($event)">
+    </app-company-list>
+    <app-company-details class="company-cards__container"
+                         [company]="selectedCompany">
+    </app-company-details>
   </section>
 </div>

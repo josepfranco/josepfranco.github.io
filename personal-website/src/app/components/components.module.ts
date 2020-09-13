@@ -8,6 +8,7 @@ import { RouterModule } from '@angular/router';
 import { BackgroundParallaxComponent } from './background-parallax/background-parallax.component';
 import { TimelineComponent } from './timeline/timeline.component';
 import { CardComponent } from './card/card.component';
+import { TagComponent } from './tag/tag.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { CardComponent } from './card/card.component';
     ItemComponent,
     BackgroundParallaxComponent,
     TimelineComponent,
-    CardComponent
+    CardComponent,
+    TagComponent
   ],
     exports: [
         NotFoundComponent,
@@ -25,7 +27,8 @@ import { CardComponent } from './card/card.component';
         LogoComponent,
         ItemComponent,
         BackgroundParallaxComponent,
-        CardComponent
+        CardComponent,
+        TagComponent
     ],
   imports: [
     CommonModule,

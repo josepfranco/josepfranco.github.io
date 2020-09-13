@@ -2,15 +2,15 @@
 
 .company-card {
   filter: grayscale(100%);
-  padding: 2em;
-  margin: 2em;
+  padding: 1em;
+  margin: 1em;
   background: $white;
   @include boxShadow(6);
   transition: all 450ms ease;
 
   img {
-    width: 200px;
-    height: 200px;
+    width: 6em;
+    height: 2em;
     object-fit: contain;
   }
 

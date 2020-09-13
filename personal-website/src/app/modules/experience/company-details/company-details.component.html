@@ -1,0 +1,39 @@
+<app-card [isInverted]="true">
+  <div class="header">
+    <div class="header__information">
+      <!-- POSITION -->
+      <h2><strong>{{ company?.position }}</strong></h2>
+
+      <!-- START/END DATE -->
+      <ng-container *ngIf="company?.duration?.end; else noStartDate">
+        <p>{{ company?.duration?.start | date }} to {{ company?.duration?.end | date }}</p>
+      </ng-container>
+      <ng-template #noStartDate>
+        <p>Since {{ company?.duration?.start | date }}</p>
+      </ng-template>
+
+      <!-- TAGS -->
+      <div class="header__tags">
+        <app-tag *ngFor="let tag of (company?.tags || [])"
+                 [tag]="tag">
+        </app-tag>
+      </div>
+
+      <!-- DESCRIPTION -->
+      <div class="header__description">
+        <p>{{ company?.description }}</p>
+      </div>
+
+      <!-- URL -->
+      <div class="header__url">
+        <a target="_blank" rel="noopener noreferrer" href="{{ company?.url }}">
+          <i class="gg-external"></i>
+        </a>
+      </div>
+    </div>
+    <div class="header__separator"></div>
+    <img class="header__image"
+         src="assets/experience/{{ company?.imageUrl }}"
+         alt="{{ company?.name }}">
+  </div>
+</app-card>
