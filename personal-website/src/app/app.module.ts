@@ -14,8 +14,8 @@ import { AppRoutingModule } from './app-routing.module';
     HomepageModule,
     ExperienceModule,
     ComponentsModule,
-    BrowserAnimationsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   declarations: [AppComponent],

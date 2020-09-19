@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {TagDto} from '../../services/models/TagDto';
-import {TagType} from '../../services/models/TagType';
+import {TagDto} from '../../services/models/dtos/TagDto';
+import {TagType} from '../../services/models/enums/TagType';
 
 @Component({
   selector: 'app-tag',

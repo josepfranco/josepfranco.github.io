@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { PageComponent } from './page/page.component';
+import { PortfolioPageComponent } from './portfolio-page/portfolio-page.component';
+import {ProjectPageComponent} from './project-page/project-page.component';
 
 const routes: Routes = [
-  { path: '', component: PageComponent }
+  { path: '',    component: PortfolioPageComponent, data: { animation: 'portfolio' } },
+  { path: ':id', component: ProjectPageComponent, data: { animation: 'project' } }
 ];
 
 @NgModule({

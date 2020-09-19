@@ -1,8 +1,8 @@
 import {Component, HostBinding, OnDestroy, OnInit} from '@angular/core';
 import {EducationDataService} from '../../../services/data/education-data.service';
-import {SchoolDto} from '../../../services/models/SchoolDto';
+import {SchoolDto} from '../../../services/models/dtos/SchoolDto';
 import {Subscription} from 'rxjs';
-import {DateUtilsService} from '../../../services/utils/date.service';
+import {DateUtilsService} from '../../../services/utils/date-utils.service';
 
 @Component({
   templateUrl: './page.component.html',

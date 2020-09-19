@@ -1,0 +1,16 @@
+<div class="card">
+  <div class="card__overlay">
+    <app-project-type-tag class="card__type" [type]="project?.type"></app-project-type-tag>
+  </div>
+  <div class="card__image-container">
+    <img class="card__image" src="assets/portfolio/{{project?.imageUrl}}" alt="{{project?.name}}">
+  </div>
+  <div class="card__header-container">
+    <h4>{{ project?.name }}</h4>
+  </div>
+  <div class="card__tags-container">
+    <app-tag *ngFor="let tag of getImportantTags()"
+             [tag]="tag">
+    </app-tag>
+  </div>
+</div>

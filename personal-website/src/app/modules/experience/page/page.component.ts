@@ -1,8 +1,8 @@
 import {Component, HostBinding, OnDestroy, OnInit} from '@angular/core';
 import {Subscription} from 'rxjs';
 import {ExperienceDataService} from '../../../services/data/experience-data.service';
-import {CompanyDto} from '../../../services/models/CompanyDto';
-import {DateUtilsService} from '../../../services/utils/date.service';
+import {CompanyDto} from '../../../services/models/dtos/CompanyDto';
+import {DateUtilsService} from '../../../services/utils/date-utils.service';
 
 @Component({
   templateUrl: './page.component.html',

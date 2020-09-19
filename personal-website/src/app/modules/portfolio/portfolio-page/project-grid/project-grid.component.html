@@ -1,0 +1,7 @@
+<div class="grid">
+  <app-project class="grid__item"
+               *ngFor="let project of projectList"
+               [project]="project"
+               [routerLink]="['/portfolio', project.id]">
+  </app-project>
+</div>

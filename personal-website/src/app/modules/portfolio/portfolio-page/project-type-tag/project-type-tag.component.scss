@@ -1,0 +1,42 @@
+@import "../../../../../scss/modules/all";
+
+.tag {
+  margin: 0.1em;
+  border-radius: 0.4em;
+  width: auto;
+
+  &__name {
+    margin: 0 0.5em 0 0.5em;
+    color: $white;
+  }
+
+  &--blue {
+    background: $blue;
+    border: 2px solid $dark-blue;
+  }
+
+  &--red {
+    background: #d75555;
+    border: 2px solid #8a3131;
+  }
+
+  &--yellow {
+    background: #d4ae4f;
+    border: 2px solid #856927;
+  }
+
+  &--cyan {
+    background: #7cc6c6;
+    border: 2px solid #3f6d6d;
+  }
+
+  &--pink {
+    background: #a95d9d;
+    border: 2px solid #7a4271;
+  }
+
+  &--green {
+    background: #73bc62;
+    border: 2px solid #477e3c;
+  }
+}

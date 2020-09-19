@@ -1,8 +1,9 @@
-import { SchoolDto } from '../app/services/models/SchoolDto';
+import { SchoolDto } from '../app/services/models/dtos/SchoolDto';
 
 export const educationMockData =
   [
     {
+      id: 'esfga',
       name: 'ESFGA',
       description: 'Basic Education at Escola Frei Gonçalo de Azevedo',
       imageUrl: 'esfga_logo.jpg',
@@ -12,6 +13,7 @@ export const educationMockData =
       }
     } as SchoolDto,
     {
+      id: 'bsc-fcul',
       name: 'BSc FCUL',
       description: 'Bachelors in Software Engineering at Faculdade de Ciências da Universidade de Lisboa',
       imageUrl: 'fcul_logo.png',
@@ -21,6 +23,7 @@ export const educationMockData =
       }
     } as SchoolDto,
     {
+      id: 'msc-fcul',
       name: 'MSc FCUL',
       description: 'Masters in Software Engineering at Faculdade de Ciências da Universidade de Lisboa (incomplete)',
       imageUrl: 'fcul_logo.png',

@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {CompanyDto} from '../../../services/models/CompanyDto';
+import {CompanyDto} from '../../../services/models/dtos/CompanyDto';
 
 @Component({
   selector: 'app-company-details',

@@ -1,9 +1,10 @@
-import {CompanyDto} from '../app/services/models/CompanyDto';
-import {TagType} from '../app/services/models/TagType';
+import {CompanyDto} from '../app/services/models/dtos/CompanyDto';
+import {TagType} from '../app/services/models/enums/TagType';
 
 export const experienceMockData =
   [
     {
+      id: 'lasige',
       name: 'LaSIGE',
       position: 'Junior Researcher',
       tags: [
@@ -31,10 +32,11 @@ export const experienceMockData =
       }
     } as CompanyDto,
     {
+      id: 'siemens-ag',
       name: 'Siemens AG',
       position: 'Software Engineer',
       tags: [
-        { name: '.NET Core',     type: TagType.Technology },
+        { name: 'ASP.NET Core',  type: TagType.Technology },
         { name: 'Angular',       type: TagType.Technology },
         { name: 'AWS',           type: TagType.Technology },
         { name: 'PostgreSQL',    type: TagType.Technology },

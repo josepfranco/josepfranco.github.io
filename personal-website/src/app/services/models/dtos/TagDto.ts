@@ -1,4 +1,4 @@
-import {TagType} from './TagType';
+import {TagType} from '../enums/TagType';
 
 export interface TagDto {
   name: string;
