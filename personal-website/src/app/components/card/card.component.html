@@ -1,8 +1,11 @@
 <h1 *ngIf="title" class="card-header">{{ title }}</h1>
 <div class="card">
   <div *ngIf="!isInverted" class="card__line card__line--left"></div>
-  <div class="card__content">
-    <ng-content></ng-content>
+  <div class="card__container">
+    <img *ngIf="imageUrl" class="card__image" src="{{ imageUrl }}">
+    <div class="card__content">
+      <ng-content></ng-content>
+    </div>
   </div>
   <div *ngIf="isInverted" class="card__line card__line--right"></div>
 </div>

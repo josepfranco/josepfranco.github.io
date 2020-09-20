@@ -18,7 +18,7 @@ function translateTo({x = 0, y = 0, rotate = 0}): any {
     ], optional),
     query(':enter', [
       style({ transform: `translate(${x}%, ${y}%) rotate(${rotate}deg)`, opacity: 1})
-    ]),
+    ], optional),
     group([
       query(':leave', [
         animate('300ms ease-out', style({ transform: `translate(${x}%, ${y}%) rotate(${rotate}deg)`, opacity: 0}))

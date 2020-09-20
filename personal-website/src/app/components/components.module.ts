@@ -9,6 +9,7 @@ import { BackgroundParallaxComponent } from './background-parallax/background-pa
 import { TimelineComponent } from './timeline/timeline.component';
 import { CardComponent } from './card/card.component';
 import { TagComponent } from './tag/tag.component';
+import { IconUrlComponent } from './icon-url/icon-url.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { TagComponent } from './tag/tag.component';
     BackgroundParallaxComponent,
     TimelineComponent,
     CardComponent,
-    TagComponent
+    TagComponent,
+    IconUrlComponent
   ],
     exports: [
         NotFoundComponent,
@@ -28,7 +30,8 @@ import { TagComponent } from './tag/tag.component';
         ItemComponent,
         BackgroundParallaxComponent,
         CardComponent,
-        TagComponent
+        TagComponent,
+        IconUrlComponent
     ],
   imports: [
     CommonModule,

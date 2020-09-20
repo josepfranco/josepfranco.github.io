@@ -1,4 +1,4 @@
-import {Component, OnDestroy, OnInit} from '@angular/core';
+import {Component, HostBinding, OnDestroy, OnInit} from '@angular/core';
 import {PortfolioDataService} from '../../../services/data/portfolio-data.service';
 import {ProjectDto} from '../../../services/models/dtos/ProjectDto';
 import {ActivatedRoute, Router} from '@angular/router';
@@ -10,6 +10,12 @@ import {Subscription} from 'rxjs';
   styleUrls: ['./project-page.component.scss']
 })
 export class ProjectPageComponent implements OnInit, OnDestroy {
+
+  @HostBinding('style.width')
+  parentWidth = '100%';
+
+  @HostBinding('style.height')
+  parentHeight = '100%';
 
   project: ProjectDto;
 

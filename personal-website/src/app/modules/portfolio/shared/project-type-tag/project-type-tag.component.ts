@@ -12,8 +12,6 @@ export class ProjectTypeTagComponent implements OnInit {
   @Input()
   type: ProjectType;
 
-  ProjectType: ProjectType;
-
   constructor() { }
 
   ngOnInit(): void {

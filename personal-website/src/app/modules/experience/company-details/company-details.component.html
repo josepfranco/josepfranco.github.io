@@ -2,7 +2,13 @@
   <div class="header">
     <div class="header__information">
       <!-- POSITION -->
-      <h2><strong>{{ company?.position }}</strong></h2>
+      <div class="header__title">
+        <h2><strong>{{ company?.position }} </strong></h2>
+        <app-icon-url [url]="company?.url"
+                      [icon]="'gg-external'">
+        </app-icon-url>
+      </div>
+
 
       <!-- START/END DATE -->
       <ng-container *ngIf="company?.duration?.end; else noStartDate">
@@ -24,12 +30,6 @@
         <p>{{ company?.description }}</p>
       </div>
 
-      <!-- URL -->
-      <div class="header__url">
-        <a target="_blank" rel="noopener noreferrer" href="{{ company?.url }}">
-          <i class="gg-external"></i>
-        </a>
-      </div>
     </div>
     <div class="header__separator"></div>
     <img class="header__image"

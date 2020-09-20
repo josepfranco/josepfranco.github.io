@@ -8,7 +8,7 @@ import * as Parallax from 'parallax-js';
 })
 export class BackgroundParallaxComponent implements OnInit, OnDestroy {
 
-  private parallax: any;
+  private parallax: Parallax;
 
   constructor() { }
 

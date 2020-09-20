@@ -1,11 +1,11 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input, OnDestroy, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-card',
   templateUrl: './card.component.html',
   styleUrls: ['./card.component.scss']
 })
-export class CardComponent implements OnInit {
+export class CardComponent implements OnInit, OnDestroy {
 
   @Input()
   title: string;
@@ -13,9 +13,15 @@ export class CardComponent implements OnInit {
   @Input()
   isInverted: boolean;
 
+  @Input()
+  imageUrl: string;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  ngOnDestroy(): void {
   }
 
 }

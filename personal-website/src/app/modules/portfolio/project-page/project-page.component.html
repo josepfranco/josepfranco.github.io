@@ -1,3 +1,32 @@
 <div class="page-scrollable">
   <h1>{{ project?.name }}</h1>
+
+  <app-card class="card" [imageUrl]="'assets/portfolio/' + project?.imageUrl">
+    <p>{{ project?.description }}</p>
+
+    <div class="card__state-and-type">
+      <app-project-type-tag [type]="project?.type"></app-project-type-tag>
+      <app-project-state-tag [state]="project?.state"></app-project-state-tag>
+    </div>
+
+    <div class="card__links">
+      <app-icon-url *ngIf="project.url"
+                    [url]="project.url"
+                    [icon]="'gg-external'">
+      </app-icon-url>
+      <app-icon-url *ngIf="project.sourceUrl"
+                    [url]="project.sourceUrl"
+                    [icon]="'gg-code'">
+      </app-icon-url>
+      <app-icon-url [url]="project.sourceUrl"
+                    [icon]="'gg-youtube'">
+      </app-icon-url>
+    </div>
+
+    <div class="card__tags">
+      <app-tag *ngFor="let tag of (project?.tags || [])"
+               [tag]="tag">
+      </app-tag>
+    </div>
+  </app-card>
 </div>
